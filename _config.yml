@@ -3,6 +3,7 @@ safe: true
 source: "/"
 incremental: false
 highlighter: rouge
+theme: jekill-theme-minimal
 gist:
   noscript: false
 kramdown:

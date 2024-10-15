@@ -10,7 +10,7 @@
       
       
       
-        <link rel="next" href="about/">
+        <link rel="next" href="cli/">
       
       
       <link rel="icon" href="assets/KCI.ico">
@@ -196,6 +196,17 @@
         
       
       
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  <span class="md-ellipsis">
+    Home
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
       <a href="." class="md-nav__link md-nav__link--active">
         
   
@@ -206,6 +217,83 @@
 
       </a>
       
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#lets-get-started-init" class="md-nav__link">
+    <span class="md-ellipsis">
+      Let's get started: init
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#save-your-work-commit" class="md-nav__link">
+    <span class="md-ellipsis">
+      Save your work: commit
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="cli/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Git CLI
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="gui/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Git GUI
+  </span>
+  
+
+      </a>
     </li>
   
 
@@ -250,6 +338,32 @@
     
   
   
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#lets-get-started-init" class="md-nav__link">
+    <span class="md-ellipsis">
+      Let's get started: init
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#save-your-work-commit" class="md-nav__link">
+    <span class="md-ellipsis">
+      Save your work: commit
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
 </nav>
                   </div>
                 </div>
@@ -268,6 +382,40 @@
 handle everything from small to very large projects with speed and efficiency. 
 It is the most popular version control system among professional programmers, 
 and this tutorial aims to making it understandable and usable by non-programmers.</p>
+<p>Git can be used both from the command-line interface (a.k.a. <code>cmd</code> under windows) or
+via a graphical user interface. This page describes the operations that Git can
+execute, independently from the type of interface and refers to other pages for 
+the CLI and GUI way of doing it.</p>
+<h2 id="lets-get-started-init">Let's get started: <code>init</code></h2>
+<p>Say that you have a folder <code>MyProject</code> containing some files (or empty) and you want to start 
+version-controlling it with git. To do that you ask git to run the <code>init</code> operation.</p>
+<p>The <code>git init</code> operation creates a <code>.git</code> subfolder inside the <code>MyProject</code> folder, which will
+hold all the git internal files. You don't need to be concerned about that folder; just don't
+delet it, or git will lost all its memory about the version history of <code>MyProject</code>.</p>
+<blockquote>
+<p>Learn how to perform the <code>git init</code> operation via the 
+<a href="cli/#git-init-operation">CLI</a> or via the <a href="gui/#git-init-operation">GUI</a>.</p>
+</blockquote>
+<h2 id="save-your-work-commit">Save your work: <code>commit</code></h2>
+<p>We all make backups of our work so now and then: we take the folder containig our work
+and we make a copy of it, namining it something like <code>MyProject_2024-10-14</code>. So, if anything
+goes wrong with the files in our working directory <code>MyProject</code>, we can always restore
+an older version of it.</p>
+<p>In git terms, this is a <em>commit</em> operation (to commit = consign or record for preservation).
+You run a <code>git commit</code> operation and git will make a copy of your working directory and
+give it a name for you. You can commit as many versions of your working directory as you want.</p>
+<blockquote>
+<p>Notice that git commit takes a snapshot of your entire working directory, but it does
+it in a smart and disk-space-efficient way: just the minimum amount of information
+strictly necessary will be stored on disk.</p>
+</blockquote>
+<p>We will visually represnt the working directory (WD) and its commits (git name for snapshot/backup) 
+as shown in the following picture.</p>
+<p><img alt="commits" src="assets/img/commit.png" /></p>
+<blockquote>
+<p>Learn how to perform the <code>git commit</code> operation via the 
+<a href="cli/#git-commit-operation">CLI</a> or via the <a href="gui/#git-commit-operation">GUI</a>.</p>
+</blockquote>
 
 
 

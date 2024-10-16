@@ -46,3 +46,33 @@ as shown in the following picture.
 
 > Learn how to perform the `git commit` operation via the 
 > [CLI](cli.md#git-commit-operation) or via the [GUI](gui.md#git-commit-operation).
+
+
+## Restore your work: `checkout`
+
+*in progress ...*
+
+
+## Try new ideas: `branch`
+
+*in progress ...*
+
+
+## Synchronize branches: `merge`
+
+*in progress ...*
+
+
+## Start cooperating on existing projects: `clone`
+
+*in progress ...*
+
+
+## Share your contributions: `push`
+
+*in progress ...*
+
+
+## Stay in sync: `pull`
+
+*in progress ...*

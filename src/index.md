@@ -49,8 +49,13 @@ as shown in the following picture.
 
 
 ## Restore your work: `checkout`
+If you want to restore the working directory to the status it had at the moment of
+a certain commit, you run the `git checkout` operation.
 
-*in progress ...*
+![commits](assets/img/checkout.png)
+
+> Learn how to perform the `git checkout` operation via the 
+> [CLI](cli.md#git-commit-operation) or via the [GUI](gui.md#git-commit-operation).
 
 
 ## Try new ideas: `branch`

@@ -49,6 +49,7 @@ as shown in the following picture.
 
 
 ## Restore your work: `checkout`
+
 If you want to restore the working directory to the status it had at the moment of
 a certain commit, you run the `git checkout` operation.
 
@@ -60,12 +61,63 @@ a certain commit, you run the `git checkout` operation.
 
 ## Try new ideas: `branch`
 
-*in progress ...*
+There are situations when you may want to create a copy (WD2) of your working
+directory (WD1), try something new without messing up the original copy WD1 and 
+eventually, if your new idea works, delete the original WD1 and go back to having 
+only one version (WD2) of your work. If your new idea turns out to be a bad idea, 
+you can just delete the second copy WD2 of your working directory and go back to 
+the original copy WD1.
+
+The operation of creating a copy of your working directory, in Git is called
+`branching`; except that Git doesn't really create a copy of anything: the branch
+exists in the `.git` folder and you just choose which branch gets loaded in your
+working directory.
+
+Say that you have done 3 commits and that your working directory corresponds to
+the third commit. In git terms, you are on the `main branch` and the status
+of your project looks like the following figure.
+
+![branch-0](assets/img/branch-0.png)
+
+When you create a new branch (say branch *'bravo'*), it's like if a copy of 
+commit 03 is made internally by git.
+
+![branch-1](assets/img/branch-1.png)
+
+Now you can switch to the branch *'bravo'* and start committing changes to that
+branch, while the *'main'* branch stays unchanged.
+
+![branch-2](assets/img/branch-2.png)
+
+You can switch between your two branches as many times as you want. Every time you
+switch branch, the latest commit of that branche will be checked-out to your
+working directory. If you switch back to the *'main'* branch, you can also keep
+committing changes to it.
+
+![branch-3](assets/img/branch-3.png)
+
+Let's go back for a moment to the original metaphor of two copies of the same
+folder (the two branches of my project). And let's immagin that we have 
+modified both of them (committed changes in both branches). In such a situation,
+going back to one version that keeps all the changes made to both branches, can
+be a real pain. Git makes it easy, by implementing the `merge` command.
+
+> Learn how to perform the `git branch` operations via the 
+> [CLI](cli.md#git-branch-operation) or via the [GUI](gui.md#git-branch-operation).
 
 
 ## Synchronize branches: `merge`
 
-*in progress ...*
+The `git merge` command takes the last commits of two different branches and mixes 
+them together in a new commit, so that the new commit contains all the changes of both 
+the branches. The following figure shows merging the branch *'bravo'* (commit 05) and 
+the branch *'main'* (commit 07) into the new commit 08, which is then added to
+the *'main'* branch.
+
+![merge](assets/img/merge.png)
+
+> Learn how to perform the `git merge` operations via the 
+> [CLI](cli.md#git-merge-operation) or via the [GUI](gui.md#git-merge-operation).
 
 
 ## Start cooperating on existing projects: `clone`

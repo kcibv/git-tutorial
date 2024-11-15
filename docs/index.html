@@ -14,7 +14,7 @@
       
       
       <link rel="icon" href="assets/KCI.ico">
-      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.5.40">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.5.42">
     
     
       
@@ -22,7 +22,7 @@
       
     
     
-      <link rel="stylesheet" href="assets/stylesheets/main.8c3ca2c6.min.css">
+      <link rel="stylesheet" href="assets/stylesheets/main.0253249f.min.css">
       
       
 
@@ -533,9 +533,51 @@ a certain commit, you run the <code>git checkout</code> operation.</p>
 <a href="cli/#git-commit-operation">CLI</a> or via the <a href="gui/#git-commit-operation">GUI</a>.</p>
 </blockquote>
 <h2 id="try-new-ideas-branch">Try new ideas: <code>branch</code></h2>
-<p><em>in progress ...</em></p>
+<p>There are situations when you may want to create a copy (WD2) of your working
+directory (WD1), try something new without messing up the original copy WD1 and 
+eventually, if your new idea works, delete the original WD1 and go back to having 
+only one version (WD2) of your work. If your new idea turns out to be a bad idea, 
+you can just delete the second copy WD2 of your working directory and go back to 
+the original copy WD1.</p>
+<p>The operation of creating a copy of your working directory, in Git is called
+<code>branching</code>; except that Git doesn't really create a copy of anything: the branch
+exists in the <code>.git</code> folder and you just choose which branch gets loaded in your
+working directory.</p>
+<p>Say that you have done 3 commits and that your working directory corresponds to
+the third commit. In git terms, you are on the <code>main branch</code> and the status
+of your project looks like the following figure.</p>
+<p><img alt="branch-0" src="assets/img/branch-0.png" /></p>
+<p>When you create a new branch (say branch <em>'bravo'</em>), it's like if a copy of 
+commit 03 is made internally by git.</p>
+<p><img alt="branch-1" src="assets/img/branch-1.png" /></p>
+<p>Now you can switch to the branch <em>'bravo'</em> and start committing changes to that
+branch, while the <em>'main'</em> branch stays unchanged.</p>
+<p><img alt="branch-2" src="assets/img/branch-2.png" /></p>
+<p>You can switch between your two branches as many times as you want. Every time you
+switch branch, the latest commit of that branche will be checked-out to your
+working directory. If you switch back to the <em>'main'</em> branch, you can also keep
+committing changes to it.</p>
+<p><img alt="branch-3" src="assets/img/branch-3.png" /></p>
+<p>Let's go back for a moment to the original metaphor of two copies of the same
+folder (the two branches of my project). And let's immagin that we have 
+modified both of them (committed changes in both branches). In such a situation,
+going back to one version that keeps all the changes made to both branches, can
+be a real pain. Git makes it easy, by implementing the <code>merge</code> command.</p>
+<blockquote>
+<p>Learn how to perform the <code>git branch</code> operations via the 
+<a href="cli/#git-branch-operation">CLI</a> or via the <a href="gui/#git-branch-operation">GUI</a>.</p>
+</blockquote>
 <h2 id="synchronize-branches-merge">Synchronize branches: <code>merge</code></h2>
-<p><em>in progress ...</em></p>
+<p>The <code>git merge</code> command takes the last commits of two different branches and mixes 
+them together in a new commit, so that the new commit contains all the changes of both 
+the branches. The following figure shows merging the branch <em>'bravo'</em> (commit 05) and 
+the branch <em>'main'</em> (commit 07) into the new commit 08, which is then added to
+the <em>'main'</em> branch.</p>
+<p><img alt="merge" src="assets/img/merge.png" /></p>
+<blockquote>
+<p>Learn how to perform the <code>git merge</code> operations via the 
+<a href="cli/#git-merge-operation">CLI</a> or via the <a href="gui/#git-merge-operation">GUI</a>.</p>
+</blockquote>
 <h2 id="start-cooperating-on-existing-projects-clone">Start cooperating on existing projects: <code>clone</code></h2>
 <p><em>in progress ...</em></p>
 <h2 id="share-your-contributions-push">Share your contributions: <code>push</code></h2>
@@ -591,7 +633,7 @@ a certain commit, you run the <code>git checkout</code> operation.</p>
     <script id="__config" type="application/json">{"base": ".", "features": [], "search": "assets/javascripts/workers/search.6ce7567c.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
     
     
-      <script src="assets/javascripts/bundle.525ec568.min.js"></script>
+      <script src="assets/javascripts/bundle.83f73b43.min.js"></script>
       
     
   </body>

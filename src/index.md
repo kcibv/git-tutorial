@@ -90,23 +90,25 @@ branch, while the *'main'* branch stays unchanged.
 ![branch-2](assets/img/branch-2.png)
 
 You can switch between your two branches as many times as you want. Every time you
-switch branch, the latest commit of that branche will be checked-out to your
+switch branch, the latest commit of that branch will be checked-out to your
 working directory. If you switch back to the *'main'* branch, you can also keep
 committing changes to it.
 
 ![branch-3](assets/img/branch-3.png)
 
-Let's go back for a moment to the original metaphor of two copies of the same
-folder (the two branches of my project). And let's immagin that we have 
-modified both of them (committed changes in both branches). In such a situation,
-going back to one version that keeps all the changes made to both branches, can
-be a real pain. Git makes it easy, by implementing the `merge` command.
-
-> Learn how to perform the `git branch` operations via the 
+> Learn how to perform the `git branch` operation via the 
 > [CLI](cli.md#git-branch-operation) or via the [GUI](gui.md#git-branch-operation).
 
 
 ## Synchronize branches: `merge`
+
+In the previous section we talked about the `git banch` operation, which is
+conceptually equivalent to making a copy (a branch) of your working directory
+and having two versions of the same project. Let's imagine that we have 
+modified both copies of the project forlder (committed changes in both branches). 
+In such a situation, going back to one version that keeps all the changes made 
+to both branches, can be a real pain. Git makes it easy, by implementing 
+the `merge` command.
 
 The `git merge` command takes the last commits of two different branches and mixes 
 them together in a new commit, so that the new commit contains all the changes of both 
@@ -116,20 +118,50 @@ the *'main'* branch.
 
 ![merge](assets/img/merge.png)
 
-> Learn how to perform the `git merge` operations via the 
+> Learn how to perform the `git merge` operation via the 
 > [CLI](cli.md#git-merge-operation) or via the [GUI](gui.md#git-merge-operation).
 
 
-## Start cooperating on existing projects: `clone`
+## Start cooperating: `clone`
 
-*in progress ...*
+Say that Tim, a colleagues of yours, wants to help you with your `MyProject` project. 
+One way to allow Tim to do so is by giving him access to your MyProject folder and let
+him modify its content. A better way is to give Tim a copy of MyProject, let him 
+modify his own copy on his own computer and then merge the two copies again.
+
+In the Git world, the operation of getting a copy of someone else's project folder
+from his computer to yours is called *'cloning'*.
+
+![merge](assets/img/clone.png)
+
+> Learn how to perform the `git clone` operation via the 
+> [CLI](cli.md#git-clone-operation) or via the [GUI](gui.md#git-clone-operation).
 
 
-## Share your contributions: `push`
+## Send changes to a remote: `push`
 
-*in progress ...*
+When Tim has committed some changes to his local clone of your MyProject folder, 
+he may want to send those commits over to your machine, so you stay in sync.
+This operation is called `push`: Tim pushes his changes to your project folder.
+
+![merge](assets/img/push.png)
+
+> Learn how to perform the `git push` operation via the 
+> [CLI](cli.md#git-push-operation) or via the [GUI](gui.md#git-push-operation).
 
 
-## Stay in sync: `pull`
 
-*in progress ...*
+## Fetch changes from a remote: `pull`
+
+When you have committed some changes to your local MyProject folder, Tim may want
+to fetch those commits from your machine, so hie will keep his clone in sync.
+This operation is called `pull`: Tim pulls your changes from your project folder.
+
+![merge](assets/img/pull.png)
+
+In reality, pull will not just fetch the remote commits to the local repository,
+but it will also merge them. There is actually a git operation that fetches 
+remote commits without merging them, and it is called (gess what) `git fetch`.
+
+> Learn how to perform the `git pull` operation via the 
+> [CLI](cli.md#git-pull-operation) or via the [GUI](gui.md#git-pull-operation).

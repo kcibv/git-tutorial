@@ -14,7 +14,7 @@
       
       
       <link rel="icon" href="assets/KCI.ico">
-      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.5.42">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.5.49">
     
     
       
@@ -22,7 +22,7 @@
       
     
     
-      <link rel="stylesheet" href="assets/stylesheets/main.0253249f.min.css">
+      <link rel="stylesheet" href="assets/stylesheets/main.6f8fc17f.min.css">
       
       
 
@@ -278,27 +278,27 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#start-cooperating-on-existing-projects-clone" class="md-nav__link">
+  <a href="#start-cooperating-clone" class="md-nav__link">
     <span class="md-ellipsis">
-      Start cooperating on existing projects: clone
+      Start cooperating: clone
     </span>
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#share-your-contributions-push" class="md-nav__link">
+  <a href="#send-changes-to-a-remote-push" class="md-nav__link">
     <span class="md-ellipsis">
-      Share your contributions: push
+      Send changes to a remote: push
     </span>
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#stay-in-sync-pull" class="md-nav__link">
+  <a href="#fetch-changes-from-a-remote-pull" class="md-nav__link">
     <span class="md-ellipsis">
-      Stay in sync: pull
+      Fetch changes from a remote: pull
     </span>
   </a>
   
@@ -444,27 +444,27 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#start-cooperating-on-existing-projects-clone" class="md-nav__link">
+  <a href="#start-cooperating-clone" class="md-nav__link">
     <span class="md-ellipsis">
-      Start cooperating on existing projects: clone
+      Start cooperating: clone
     </span>
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#share-your-contributions-push" class="md-nav__link">
+  <a href="#send-changes-to-a-remote-push" class="md-nav__link">
     <span class="md-ellipsis">
-      Share your contributions: push
+      Send changes to a remote: push
     </span>
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#stay-in-sync-pull" class="md-nav__link">
+  <a href="#fetch-changes-from-a-remote-pull" class="md-nav__link">
     <span class="md-ellipsis">
-      Stay in sync: pull
+      Fetch changes from a remote: pull
     </span>
   </a>
   
@@ -554,20 +554,22 @@ commit 03 is made internally by git.</p>
 branch, while the <em>'main'</em> branch stays unchanged.</p>
 <p><img alt="branch-2" src="assets/img/branch-2.png" /></p>
 <p>You can switch between your two branches as many times as you want. Every time you
-switch branch, the latest commit of that branche will be checked-out to your
+switch branch, the latest commit of that branch will be checked-out to your
 working directory. If you switch back to the <em>'main'</em> branch, you can also keep
 committing changes to it.</p>
 <p><img alt="branch-3" src="assets/img/branch-3.png" /></p>
-<p>Let's go back for a moment to the original metaphor of two copies of the same
-folder (the two branches of my project). And let's immagin that we have 
-modified both of them (committed changes in both branches). In such a situation,
-going back to one version that keeps all the changes made to both branches, can
-be a real pain. Git makes it easy, by implementing the <code>merge</code> command.</p>
 <blockquote>
-<p>Learn how to perform the <code>git branch</code> operations via the 
+<p>Learn how to perform the <code>git branch</code> operation via the 
 <a href="cli/#git-branch-operation">CLI</a> or via the <a href="gui/#git-branch-operation">GUI</a>.</p>
 </blockquote>
 <h2 id="synchronize-branches-merge">Synchronize branches: <code>merge</code></h2>
+<p>In the previous section we talked about the <code>git banch</code> operation, which is
+conceptually equivalent to making a copy (a branch) of your working directory
+and having two versions of the same project. Let's imagine that we have 
+modified both copies of the project forlder (committed changes in both branches). 
+In such a situation, going back to one version that keeps all the changes made 
+to both branches, can be a real pain. Git makes it easy, by implementing 
+the <code>merge</code> command.</p>
 <p>The <code>git merge</code> command takes the last commits of two different branches and mixes 
 them together in a new commit, so that the new commit contains all the changes of both 
 the branches. The following figure shows merging the branch <em>'bravo'</em> (commit 05) and 
@@ -575,15 +577,42 @@ the branch <em>'main'</em> (commit 07) into the new commit 08, which is then add
 the <em>'main'</em> branch.</p>
 <p><img alt="merge" src="assets/img/merge.png" /></p>
 <blockquote>
-<p>Learn how to perform the <code>git merge</code> operations via the 
+<p>Learn how to perform the <code>git merge</code> operation via the 
 <a href="cli/#git-merge-operation">CLI</a> or via the <a href="gui/#git-merge-operation">GUI</a>.</p>
 </blockquote>
-<h2 id="start-cooperating-on-existing-projects-clone">Start cooperating on existing projects: <code>clone</code></h2>
-<p><em>in progress ...</em></p>
-<h2 id="share-your-contributions-push">Share your contributions: <code>push</code></h2>
-<p><em>in progress ...</em></p>
-<h2 id="stay-in-sync-pull">Stay in sync: <code>pull</code></h2>
-<p><em>in progress ...</em></p>
+<h2 id="start-cooperating-clone">Start cooperating: <code>clone</code></h2>
+<p>Say that Tim, a colleagues of yours, wants to help you with your <code>MyProject</code> project. 
+One way to allow Tim to do so is by giving him access to your MyProject folder and let
+him modify its content. A better way is to give Tim a copy of MyProject, let him 
+modify his own copy on his own computer and then merge the two copies again.</p>
+<p>In the Git world, the operation of getting a copy of someone else's project folder
+from his computer to yours is called <em>'cloning'</em>.</p>
+<p><img alt="merge" src="assets/img/clone.png" /></p>
+<blockquote>
+<p>Learn how to perform the <code>git clone</code> operation via the 
+<a href="cli/#git-clone-operation">CLI</a> or via the <a href="gui/#git-clone-operation">GUI</a>.</p>
+</blockquote>
+<h2 id="send-changes-to-a-remote-push">Send changes to a remote: <code>push</code></h2>
+<p>When Tim has committed some changes to his local clone of your MyProject folder, 
+he may want to send those commits over to your machine, so you stay in sync.
+This operation is called <code>push</code>: Tim pushes his changes to your project folder.</p>
+<p><img alt="merge" src="assets/img/push.png" /></p>
+<blockquote>
+<p>Learn how to perform the <code>git push</code> operation via the 
+<a href="cli/#git-push-operation">CLI</a> or via the <a href="gui/#git-push-operation">GUI</a>.</p>
+</blockquote>
+<h2 id="fetch-changes-from-a-remote-pull">Fetch changes from a remote: <code>pull</code></h2>
+<p>When you have committed some changes to your local MyProject folder, Tim may want
+to fetch those commits from your machine, so hie will keep his clone in sync.
+This operation is called <code>pull</code>: Tim pulls your changes from your project folder.</p>
+<p><img alt="merge" src="assets/img/pull.png" /></p>
+<p>In reality, pull will not just fetch the remote commits to the local repository,
+but it will also merge them. There is actually a git operation that fetches 
+remote commits without merging them, and it is called (gess what) <code>git fetch</code>.</p>
+<blockquote>
+<p>Learn how to perform the <code>git pull</code> operation via the 
+<a href="cli/#git-pull-operation">CLI</a> or via the <a href="gui/#git-pull-operation">GUI</a>.</p>
+</blockquote>
 
 
 
@@ -633,7 +662,7 @@ the <em>'main'</em> branch.</p>
     <script id="__config" type="application/json">{"base": ".", "features": [], "search": "assets/javascripts/workers/search.6ce7567c.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
     
     
-      <script src="assets/javascripts/bundle.83f73b43.min.js"></script>
+      <script src="assets/javascripts/bundle.88dd0f4e.min.js"></script>
       
     
   </body>

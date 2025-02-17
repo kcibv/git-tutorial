@@ -8,7 +8,9 @@ and this tutorial aims to making it understandable and usable by non-programmers
 Git can be used both from the command-line interface (a.k.a. `cmd` under windows) or
 via a graphical user interface. This page describes the operations that Git can
 execute, independently from the type of interface and refers to other pages for 
-the CLI and GUI way of doing it.
+the CLI way of doing it. This resource does not explain how to use any of the
+[several available GUI's](https://git-scm.com/downloads/guis), but you can find 
+the documentation you need on the internet once you know the basics. 
 
 
 ## Let's get started: `init`
@@ -20,8 +22,7 @@ The `git init` operation creates a `.git` subfolder inside the `MyProject` folde
 hold all the git internal files. You don't need to be concerned about that folder; just don't
 delet it, or git will lost all its memory about the version history of `MyProject`.
 
-> Learn how to perform the `git init` operation via the 
-> [CLI](cli.md#git-init-operation) or via the [GUI](gui.md#git-init-operation).
+> Learn how to perform the `git init` operation via the [CLI](cli.md#git-init-operation).
 
 
 ## Save your work: `commit`
@@ -44,8 +45,7 @@ as shown in the following picture.
 
 ![commits](assets/img/commit.png)
 
-> Learn how to perform the `git commit` operation via the 
-> [CLI](cli.md#git-commit-operation) or via the [GUI](gui.md#git-commit-operation).
+> Learn how to perform the `git commit` operation via the [CLI](cli.md#git-commit-operation).
 
 
 ## Restore your work: `checkout`
@@ -55,8 +55,7 @@ a certain commit, you run the `git checkout` operation.
 
 ![commits](assets/img/checkout.png)
 
-> Learn how to perform the `git checkout` operation via the 
-> [CLI](cli.md#git-commit-operation) or via the [GUI](gui.md#git-commit-operation).
+> Learn how to perform the `git checkout` operation via the [CLI](cli.md#git-commit-operation).
 
 
 ## Try new ideas: `branch`
@@ -96,8 +95,7 @@ committing changes to it.
 
 ![branch-3](assets/img/branch-3.png)
 
-> Learn how to perform the `git branch` operation via the 
-> [CLI](cli.md#git-branch-operation) or via the [GUI](gui.md#git-branch-operation).
+> Learn how to perform the `git branch` operation via the [CLI](cli.md#git-branch-operation).
 
 
 ## Synchronize branches: `merge`
@@ -118,44 +116,31 @@ the *'main'* branch.
 
 ![merge](assets/img/merge.png)
 
-> Learn how to perform the `git merge` operation via the 
-> [CLI](cli.md#git-merge-operation) or via the [GUI](gui.md#git-merge-operation).
+> Learn how to perform the `git merge` operation via the [CLI](cli.md#git-merge-operation).
 
 
-## Start cooperating: `clone`
+## Collaboration: `clone`, `push` and `pull`
 
-Say that Tim, a colleagues of yours, wants to help you with your `MyProject` project. 
-One way to allow Tim to do so is by giving him access to your MyProject folder and let
-him modify its content. A better way is to give Tim a copy of MyProject, let him 
-modify his own copy on his own computer and then merge the two copies again.
+Say that Remy, a colleagues of yours, has a Git-versioned project for which he needs 
+your help and say that you do want to cooperate with him on his project.
+One way for Remy to allow you to do so is by giving you access to his project folder 
+and let you modify its content. A better way is to give you a copy of his project
+folder, let you modify your own copy of the files and then merge the two copies again.
 
 In the Git world, the operation of getting a copy of someone else's project folder
 from his computer to yours is called *'cloning'*.
 
 ![merge](assets/img/clone.png)
 
-> Learn how to perform the `git clone` operation via the 
-> [CLI](cli.md#git-clone-operation) or via the [GUI](gui.md#git-clone-operation).
-
-
-## Send changes to a remote: `push`
-
-When Tim has committed some changes to his local clone of your MyProject folder, 
-he may want to send those commits over to your machine, so you stay in sync.
-This operation is called `push`: Tim pushes his changes to your project folder.
+When you have committed some changes to your local clone of Remy's project folder, 
+you may want to send those commits over to Remy's machine, so he stays in sync.
+This operation is called `push`: you push your changes to Remy's project folder.
 
 ![merge](assets/img/push.png)
 
-> Learn how to perform the `git push` operation via the 
-> [CLI](cli.md#git-push-operation) or via the [GUI](gui.md#git-push-operation).
-
-
-
-## Fetch changes from a remote: `pull`
-
-When you have committed some changes to your local MyProject folder, Tim may want
-to fetch those commits from your machine, so hie will keep his clone in sync.
-This operation is called `pull`: Tim pulls your changes from your project folder.
+When Remy has committed some changes to his local project folder, you may want
+to fetch those commits from his machine to keep your clone in sync.
+This operation is called `pull`: you pull Remy's changes from his project folder.
 
 ![merge](assets/img/pull.png)
 
@@ -163,5 +148,51 @@ In reality, pull will not just fetch the remote commits to the local repository,
 but it will also merge them. There is actually a git operation that fetches 
 remote commits without merging them, and it is called (gess what) `git fetch`.
 
-> Learn how to perform the `git pull` operation via the 
-> [CLI](cli.md#git-pull-operation) or via the [GUI](gui.md#git-pull-operation).
+Of course collaboration is not limited to a two-people team: you can collaborate
+with as many people as you want. Each collaborator holds his/her own version
+of the project on his/her local machine and anybody can push to or pull from 
+anybody else.
+
+Of course collaborating on large projects requires a minimum of coordination
+between the team members and the definition of a set of collaboration rules. 
+Git doesn't dictate any of those rules and leaves the team members completely 
+free to choose their cooperation strategy. 
+
+Over time, two main git branching strategies for collaboration have emerged:
+[Git Flow](https://nvie.com/posts/a-successful-git-branching-model/) and 
+[trunk-based development](ttps://trunkbaseddevelopment.com/).
+You can learn about them via the provided links or one of the many resources
+available on the internet.
+
+
+## What is GitHub then?
+
+In the previous chapter we have stated that Remy can share his project folder 
+over the network and give permission to other people to clone his folder and
+push or pull changes to and from it. But whe haven't shown how Remy can 
+actually to do that! That's because it's not a very straightforward operation 
+for beginners (to who this articol is addressed). 
+
+Luckily [GitHub](https://github.com/) (and many 
+[other similar services](https://www.gartner.com/reviews/market/devops-platforms/vendor/github/product/github/alternatives))
+come to the rescue, by providing an easy way (web-based interface) to create 
+(and host) remote repositories and share them with others.
+
+Therefore GitHub and its competitors are just web-services based on Git.
+
+
+## Learn more
+
+There are a ton of free resources available on the internet for learning Git.
+Here is a selection of them.
+
+- [Pro Git Book](https://git-scm.com/book/en/v2) a complete (and free) book 
+  about Git.
+- [Learn Git branching](https://learngitbranching.js.org/) an interactive resource
+  for learning Git.
+- [Linus Torvalds & git](https://www.youtube.com/watch?v=idLyobOhtO4) a video of
+  Linus Torvald (the creator of Linux and Git) talking about Git at Google. If
+  you are a nerd like me, you'll find this also very entertaining.
+
+
+

@@ -278,27 +278,27 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#start-cooperating-clone" class="md-nav__link">
+  <a href="#collaboration-clone-push-and-pull" class="md-nav__link">
     <span class="md-ellipsis">
-      Start cooperating: clone
+      Collaboration: clone, push and pull
     </span>
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#send-changes-to-a-remote-push" class="md-nav__link">
+  <a href="#what-is-github-then" class="md-nav__link">
     <span class="md-ellipsis">
-      Send changes to a remote: push
+      What is GitHub then?
     </span>
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#fetch-changes-from-a-remote-pull" class="md-nav__link">
+  <a href="#learn-more" class="md-nav__link">
     <span class="md-ellipsis">
-      Fetch changes from a remote: pull
+      Learn more
     </span>
   </a>
   
@@ -324,26 +324,6 @@
   
   <span class="md-ellipsis">
     Git CLI
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-    
-      
-      
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="gui/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    Git GUI
   </span>
   
 
@@ -444,27 +424,27 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#start-cooperating-clone" class="md-nav__link">
+  <a href="#collaboration-clone-push-and-pull" class="md-nav__link">
     <span class="md-ellipsis">
-      Start cooperating: clone
+      Collaboration: clone, push and pull
     </span>
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#send-changes-to-a-remote-push" class="md-nav__link">
+  <a href="#what-is-github-then" class="md-nav__link">
     <span class="md-ellipsis">
-      Send changes to a remote: push
+      What is GitHub then?
     </span>
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#fetch-changes-from-a-remote-pull" class="md-nav__link">
+  <a href="#learn-more" class="md-nav__link">
     <span class="md-ellipsis">
-      Fetch changes from a remote: pull
+      Learn more
     </span>
   </a>
   
@@ -493,7 +473,9 @@ and this tutorial aims to making it understandable and usable by non-programmers
 <p>Git can be used both from the command-line interface (a.k.a. <code>cmd</code> under windows) or
 via a graphical user interface. This page describes the operations that Git can
 execute, independently from the type of interface and refers to other pages for 
-the CLI and GUI way of doing it.</p>
+the CLI way of doing it. This resource does not explain how to use any of the
+<a href="https://git-scm.com/downloads/guis">several available GUI's</a>, but you can find 
+the documentation you need on the internet once you know the basics. </p>
 <h2 id="lets-get-started-init">Let's get started: <code>init</code></h2>
 <p>Say that you have a folder <code>MyProject</code> containing some files (or empty) and you want to start 
 version-controlling it with git. To do that you ask git to run the <code>init</code> operation.</p>
@@ -501,8 +483,7 @@ version-controlling it with git. To do that you ask git to run the <code>init</c
 hold all the git internal files. You don't need to be concerned about that folder; just don't
 delet it, or git will lost all its memory about the version history of <code>MyProject</code>.</p>
 <blockquote>
-<p>Learn how to perform the <code>git init</code> operation via the 
-<a href="cli/#git-init-operation">CLI</a> or via the <a href="gui/#git-init-operation">GUI</a>.</p>
+<p>Learn how to perform the <code>git init</code> operation via the <a href="cli/#git-init-operation">CLI</a>.</p>
 </blockquote>
 <h2 id="save-your-work-commit">Save your work: <code>commit</code></h2>
 <p>We all make backups of our work so now and then: we take the folder containig our work
@@ -521,16 +502,14 @@ strictly necessary will be stored on disk.</p>
 as shown in the following picture.</p>
 <p><img alt="commits" src="assets/img/commit.png" /></p>
 <blockquote>
-<p>Learn how to perform the <code>git commit</code> operation via the 
-<a href="cli/#git-commit-operation">CLI</a> or via the <a href="gui/#git-commit-operation">GUI</a>.</p>
+<p>Learn how to perform the <code>git commit</code> operation via the <a href="cli/#git-commit-operation">CLI</a>.</p>
 </blockquote>
 <h2 id="restore-your-work-checkout">Restore your work: <code>checkout</code></h2>
 <p>If you want to restore the working directory to the status it had at the moment of
 a certain commit, you run the <code>git checkout</code> operation.</p>
 <p><img alt="commits" src="assets/img/checkout.png" /></p>
 <blockquote>
-<p>Learn how to perform the <code>git checkout</code> operation via the 
-<a href="cli/#git-commit-operation">CLI</a> or via the <a href="gui/#git-commit-operation">GUI</a>.</p>
+<p>Learn how to perform the <code>git checkout</code> operation via the <a href="cli/#git-commit-operation">CLI</a>.</p>
 </blockquote>
 <h2 id="try-new-ideas-branch">Try new ideas: <code>branch</code></h2>
 <p>There are situations when you may want to create a copy (WD2) of your working
@@ -559,8 +538,7 @@ working directory. If you switch back to the <em>'main'</em> branch, you can als
 committing changes to it.</p>
 <p><img alt="branch-3" src="assets/img/branch-3.png" /></p>
 <blockquote>
-<p>Learn how to perform the <code>git branch</code> operation via the 
-<a href="cli/#git-branch-operation">CLI</a> or via the <a href="gui/#git-branch-operation">GUI</a>.</p>
+<p>Learn how to perform the <code>git branch</code> operation via the <a href="cli/#git-branch-operation">CLI</a>.</p>
 </blockquote>
 <h2 id="synchronize-branches-merge">Synchronize branches: <code>merge</code></h2>
 <p>In the previous section we talked about the <code>git banch</code> operation, which is
@@ -577,42 +555,64 @@ the branch <em>'main'</em> (commit 07) into the new commit 08, which is then add
 the <em>'main'</em> branch.</p>
 <p><img alt="merge" src="assets/img/merge.png" /></p>
 <blockquote>
-<p>Learn how to perform the <code>git merge</code> operation via the 
-<a href="cli/#git-merge-operation">CLI</a> or via the <a href="gui/#git-merge-operation">GUI</a>.</p>
+<p>Learn how to perform the <code>git merge</code> operation via the <a href="cli/#git-merge-operation">CLI</a>.</p>
 </blockquote>
-<h2 id="start-cooperating-clone">Start cooperating: <code>clone</code></h2>
-<p>Say that Tim, a colleagues of yours, wants to help you with your <code>MyProject</code> project. 
-One way to allow Tim to do so is by giving him access to your MyProject folder and let
-him modify its content. A better way is to give Tim a copy of MyProject, let him 
-modify his own copy on his own computer and then merge the two copies again.</p>
+<h2 id="collaboration-clone-push-and-pull">Collaboration: <code>clone</code>, <code>push</code> and <code>pull</code></h2>
+<p>Say that Remy, a colleagues of yours, has a Git-versioned project for which he needs 
+your help and say that you do want to cooperate with him on his project.
+One way for Remy to allow you to do so is by giving you access to his project folder 
+and let you modify its content. A better way is to give you a copy of his project
+folder, let you modify your own copy of the files and then merge the two copies again.</p>
 <p>In the Git world, the operation of getting a copy of someone else's project folder
 from his computer to yours is called <em>'cloning'</em>.</p>
 <p><img alt="merge" src="assets/img/clone.png" /></p>
-<blockquote>
-<p>Learn how to perform the <code>git clone</code> operation via the 
-<a href="cli/#git-clone-operation">CLI</a> or via the <a href="gui/#git-clone-operation">GUI</a>.</p>
-</blockquote>
-<h2 id="send-changes-to-a-remote-push">Send changes to a remote: <code>push</code></h2>
-<p>When Tim has committed some changes to his local clone of your MyProject folder, 
-he may want to send those commits over to your machine, so you stay in sync.
-This operation is called <code>push</code>: Tim pushes his changes to your project folder.</p>
+<p>When you have committed some changes to your local clone of Remy's project folder, 
+you may want to send those commits over to Remy's machine, so he stays in sync.
+This operation is called <code>push</code>: you push your changes to Remy's project folder.</p>
 <p><img alt="merge" src="assets/img/push.png" /></p>
-<blockquote>
-<p>Learn how to perform the <code>git push</code> operation via the 
-<a href="cli/#git-push-operation">CLI</a> or via the <a href="gui/#git-push-operation">GUI</a>.</p>
-</blockquote>
-<h2 id="fetch-changes-from-a-remote-pull">Fetch changes from a remote: <code>pull</code></h2>
-<p>When you have committed some changes to your local MyProject folder, Tim may want
-to fetch those commits from your machine, so hie will keep his clone in sync.
-This operation is called <code>pull</code>: Tim pulls your changes from your project folder.</p>
+<p>When Remy has committed some changes to his local project folder, you may want
+to fetch those commits from his machine to keep your clone in sync.
+This operation is called <code>pull</code>: you pull Remy's changes from his project folder.</p>
 <p><img alt="merge" src="assets/img/pull.png" /></p>
 <p>In reality, pull will not just fetch the remote commits to the local repository,
 but it will also merge them. There is actually a git operation that fetches 
 remote commits without merging them, and it is called (gess what) <code>git fetch</code>.</p>
-<blockquote>
-<p>Learn how to perform the <code>git pull</code> operation via the 
-<a href="cli/#git-pull-operation">CLI</a> or via the <a href="gui/#git-pull-operation">GUI</a>.</p>
-</blockquote>
+<p>Of course collaboration is not limited to a two-people team: you can collaborate
+with as many people as you want. Each collaborator holds his/her own version
+of the project on his/her local machine and anybody can push to or pull from 
+anybody else.</p>
+<p>Of course collaborating on large projects requires a minimum of coordination
+between the team members and the definition of a set of collaboration rules. 
+Git doesn't dictate any of those rules and leaves the team members completely 
+free to choose their cooperation strategy. </p>
+<p>Over time, two main git branching strategies for collaboration have emerged:
+<a href="https://nvie.com/posts/a-successful-git-branching-model/">Git Flow</a> and 
+<a href="ttps://trunkbaseddevelopment.com/">trunk-based development</a>.
+You can learn about them via the provided links or one of the many resources
+available on the internet.</p>
+<h2 id="what-is-github-then">What is GitHub then?</h2>
+<p>In the previous chapter we have stated that Remy can share his project folder 
+over the network and give permission to other people to clone his folder and
+push or pull changes to and from it. But whe haven't shown how Remy can 
+actually to do that! That's because it's not a very straightforward operation 
+for beginners (to who this articol is addressed). </p>
+<p>Luckily <a href="https://github.com/">GitHub</a> (and many 
+<a href="https://www.gartner.com/reviews/market/devops-platforms/vendor/github/product/github/alternatives">other similar services</a>)
+come to the rescue, by providing an easy way (web-based interface) to create 
+(and host) remote repositories and share them with others.</p>
+<p>Therefore GitHub and its competitors are just web-services based on Git.</p>
+<h2 id="learn-more">Learn more</h2>
+<p>There are a ton of free resources available on the internet for learning Git.
+Here is a selection of them.</p>
+<ul>
+<li><a href="https://git-scm.com/book/en/v2">Pro Git Book</a> a complete (and free) book 
+  about Git.</li>
+<li><a href="https://learngitbranching.js.org/">Learn Git branching</a> an interactive resource
+  for learning Git.</li>
+<li><a href="https://www.youtube.com/watch?v=idLyobOhtO4">Linus Torvalds &amp; git</a> a video of
+  Linus Torvald (the creator of Linux and Git) talking about Git at Google. If
+  you are a nerd like me, you'll find this also very entertaining.</li>
+</ul>
 
 
 

@@ -414,8 +414,8 @@
 
 
 <h1 id="use-git-via-the-command-line-interface">Use Git via the Command-Line interface</h1>
-<p>This page will show how to perform the main git operations using the
-git Command-Line Interface (CLI) and it will do so by walking the reader
+<p>This page will show you how to perform the main git operations using the
+git Command-Line Interface (CLI) and it will do so by walking you
 through the creation of a text-based contact book, where every
 contact item is a text file.</p>
 <blockquote>
@@ -425,7 +425,7 @@ contact item is a text file.</p>
 <li>If you don't have the git CLI installed on your machine yet, you 
   can download it from the <a href="https://git-scm.com/downloads">git website</a>.</li>
 <li>This article will assume that you operate on Microsoft Windows, but the git
-  commands are exactly the same on other platforms.</li>
+  commands are exactly the same on all other platforms.</li>
 </ul>
 </blockquote>
 <h2 id="git-init-operation">git init operation</h2>
@@ -442,47 +442,46 @@ shell, first create a new project directory; we will call our project <code>cont
 <blockquote>
 <p>For a general description of this git operation see the <a href="../">main article</a>.</p>
 </blockquote>
-<p>In order to have some changes to commit, let's add the firt two items to our
+<p>In order to have some changes to commit, let's add the first two items to our
 contacts book by creating two files <code>John.txt</code> and <code>Marie.txt</code>.</p>
-<p>Let's write the following content to <code>John.txt</code> and save it:</p>
+<p>Let's write the following contents to <code>John.txt</code> and save it:</p>
 <pre><code>name: John Nash
 phone: +1 617 253 1000
 </code></pre>
-<p>Let's write the following content to <code>Marie.txt</code> and save it:</p>
+<p>Let's write the following contents to <code>Marie.txt</code> and save it:</p>
 <pre><code>name: Marie Kurie
 phone: +33 1 56 24 55 00
 </code></pre>
 <p>You can visualize the current changes by using the <code>git status</code> command.</p>
 <p><img alt="git-status" src="../assets/img/cli-commit-1.png" /></p>
 <p>Git has correctly detected that, compared to the initial status (empty
-directory) there are two new files. </p>
-<p>Say that this is a version of our project that we want to commit; first 
-of all we need to tell git which changes we want to commit and which not: 
-for example you may want to commit only <code>Marie.txt</code> or only <code>John.txt</code>. You
-do that by adding the changes you want to commit to a virtual bucket
-named <em>staging area</em>, using the <code>git add</code> command. In this case we will
-add all the changes to the staging area.</p>
+directory) there are now two new files. </p>
+<p>Say that this is a version of our project that we want to commit: we will
+first of all need to tell git which changes we want to commit and which 
+we don't. For example, you may want to commit only <code>Marie.txt</code> or only 
+<code>John.txt</code>. You can do that by adding the changes you want to commit to 
+a virtual bucket named <em>staging area</em>, using the <code>git add</code> command. In 
+this case we will add all the changes to the staging area.</p>
 <p><img alt="git-status" src="../assets/img/cli-commit-2.png" /></p>
-<p>If we run the <code>git status</code> command again, we see that the status has
+<p>If we run the <code>git status</code> command again, we'll see that the status has
 changed: the two files are not in the <em>Untracked</em> status anymore, but
 they are now under <em>Changes to be commited</em>.</p>
 <p><img alt="git-status" src="../assets/img/cli-commit-3.png" /></p>
-<p>Now we can finally commit the changes and we do it using the
-<code>git commit</code> command, followed by a message that describes the
-commit.</p>
+<p>Now we can finally commit the changes and we'll do so using the
+<code>git commit</code> command, followed by a message that describes the commit.</p>
 <p><img alt="git-status" src="../assets/img/cli-commit-4.png" /></p>
 <p>If you run the <code>git status</code> command again, git will tell you that
-there have been made no changes since the last commit.</p>
+there no changes have been made since the last commit.</p>
 <p><img alt="git-status" src="../assets/img/cli-commit-5.png" /></p>
-<p>You can repeat this as many times as you want. To ilustrate that, let's 
+<p>You can repeat this as many times as you want. To illustrate this, let's 
 apply some changes and commit them. </p>
-<p>First of all we mispelled the family name of Marie, therefore we need 
-to change <em>'Kurie'</em>  to <em>'Curie'</em>. Let's do it and save the file.</p>
+<p>First of all we misspelled the family name of Marie, therefore we need 
+to change <em>'Kurie'</em>  to <em>'Curie'</em>. Let's do that and save the file.</p>
 <pre><code>name: Marie Curie
 phone: +33 1 56 24 55 00
 </code></pre>
 <p>Then let's add the new item <code>Alan.txt</code> to our contacts book and set
-its content as follows:</p>
+its contents as follows:</p>
 <pre><code>name: Alan Turing
 phone: +44 20 3862 3352
 </code></pre>
@@ -505,12 +504,12 @@ the two commits:</p>
 <blockquote>
 <p>For a description of this operation see the <a href="../">main tutorial</a>.</p>
 </blockquote>
-<p>So far we have initialized a git project and commited two sets of 
+<p>So far we have initialized a git project and committed two sets of 
 changes. Our project folder is now identical to the second commit. If
 you want to go back to the first commit, you can use the <code>git checkout</code>
 command. In the following example, the first commit (the one named
 <code>9b457e6394b1a3918d030a703cf25b5cc81e31a4</code>) is checked out; notice that
-you need to pass only the fist few characters of the commit name: just
+you need to enter only the first few characters of the commit name: just
 enough to uniquely identify the commit.</p>
 <p><img alt="git-checkout" src="../assets/img/cli-checkout-1.png" /></p>
 <p>You can now verify that, after this command, the content of the folder
@@ -518,13 +517,13 @@ has been modified to match the content at the moment of the first commit,
 which is:</p>
 <ul>
 <li>Only two files present: <code>Marie.txt</code> and <code>John.txt</code></li>
-<li>The file <code>Marie.txt</code> contains the mispelled name <em>'Kourie'</em></li>
+<li>The file <code>Marie.txt</code> contains the misspelled name <em>'Kourie'</em></li>
 </ul>
 <p>Although possible, this way of switching between commits is not commonly
 used; branching is a much better way of doing that. Let's therefore restore 
 the original sistuation by checkking out the master branch.</p>
 <p><img alt="git-checkout" src="../assets/img/cli-checkout-2.png" /></p>
-<p>Again, you can now verify that the lates working directory content has 
+<p>Again, you can now verify that the lates working directory contents have
 been restored. In particular:</p>
 <ul>
 <li>The folder contains three files: <code>Marie.txt</code>, <code>John.txt</code> and <code>Alan.txt</code></li>
@@ -534,32 +533,31 @@ been restored. In particular:</p>
 <blockquote>
 <p>For a description of this operation see the <a href="../">main tutorial</a>.</p>
 </blockquote>
-<p>Say that you decide to convert your items format from plain text to
-<a href="https://en.wikipedia.org/wiki/JSON">JSON</a> but while you are busy with
-it you want to keep your current format available. You then need to
-branch your project, using the <code>git branch</code> command. We will call the
-new branch "json".</p>
+<p>Say that you've decided to convert your items from plain text format to
+<a href="https://en.wikipedia.org/wiki/JSON">JSON</a>, but  you want to keep your 
+current format available. You will need to branch your project, using the 
+<code>git branch</code> command. We will call the new branch "json".</p>
 <p><img alt="git-branch-1--create-json" src="../assets/img/cli-branch-1--create-json.png" /></p>
 <p>Now the new <code>json</code> branch has been created; you can see the list of
 extisting branches by typing the <code>git branch</code> command without parameters.</p>
 <p><img alt="git-branch-2--list" src="../assets/img/cli-branch-2--list.png" /></p>
 <p>The previous command shows that there are two branches and that the
 active branch (the one with a * next to it) is <code>master</code>. The branch
-command, indeed, creates a new branch but it doesn't automatically
+command, indeed, created a new branch but it didn't automatically
 activate it. To switch to the <code>json</code> branch, we use the <code>git checkout</code>
 command:</p>
 <p><img alt="git-branch-3--checkout-json" src="../assets/img/cli-branch-3--checkout-json.png" /></p>
 <blockquote>
-<p>Notice that the screenshot of this tutorial are not made using
-the default windows shell (cmd), but using a git-aware shell. 
-That's why you see, for example, the name of the current branch
+<p>Notice that the screenshotd of this tutorial are not made using
+the default windows shell (cmd), but are done so using a git-aware 
+shell. That's why you see, for example, the name of the current branch
 next to the prompt.</p>
 </blockquote>
 <p>Now the active branch is <code>json</code>, but since we have just created it,
-its content is identical to the <code>master</code> branch. Let's then start
+its contents are identical to the <code>master</code> branch. Let's then start
 committing changes, knowing that the original <code>master</code> branch 
 content is just a <code>git checkout master</code> away.</p>
-<p>Let's rename <code>Marie.txt</code> to <code>Marie.json</code> and modify its content
+<p>Let's rename <code>Marie.txt</code> to <code>Marie.json</code> and modify its contents
 as follows ...</p>
 <pre><code>{
     &quot;name&quot;  : &quot;Marie Curie&quot;, 
@@ -568,7 +566,7 @@ as follows ...</p>
 </code></pre>
 <p>... and let's then save and commit the change.</p>
 <p><img alt="git-branch-4--commit-marie" src="../assets/img/cli-branch-4--commit-marie.png" /></p>
-<p>Let's now rename <code>John.txt</code> to <code>John.json</code> and modify its content
+<p>Let's now rename <code>John.txt</code> to <code>John.json</code> and modify its contents
 as follows ...</p>
 <pre><code>{
     &quot;name&quot;  : &quot;John Nash&quot;, 
@@ -577,7 +575,7 @@ as follows ...</p>
 </code></pre>
 <p>... and let's then save and commit the change.</p>
 <p><img alt="git-branch-5--commit-john" src="../assets/img/cli-branch-5--commit-john.png" /></p>
-<p>Let's finally rename <code>Alan.txt</code> to <code>Alan.json</code> and modify its content
+<p>Let's finally rename <code>Alan.txt</code> to <code>Alan.json</code> and modify its contents
 as follows ...</p>
 <pre><code>{
     &quot;name&quot;  : &quot;Alan Turing&quot;, 
@@ -587,7 +585,7 @@ as follows ...</p>
 <p>... and let's then save and commit the change.</p>
 <p><img alt="git-branch-6--commit-alan" src="../assets/img/cli-branch-6--commit-alan.png" /></p>
 <p>We have now performed 5 commits in total: the first two in <code>master</code> and
-three in <code>json</code>, as shown by the <code>git log</code> command.</p>
+the other three in <code>json</code>, as shown by the <code>git log</code> command.</p>
 <p><img alt="git-branch-7--commit-log" src="../assets/img/cli-branch-7--commit-log.png" /></p>
 <p>We could now restore the <code>master</code> branch using the command <code>git checkout master</code>.</p>
 <p><img alt="git-branch-8--checkout-master" src="../assets/img/cli-branch-8--checkout-master.png" /></p>
@@ -597,8 +595,8 @@ file and save it.</p>
 <pre><code>name: Enrico Fermi
 phone: +39 06 4550 2901
 </code></pre>
-<p>Let's then commit the changes; notice that the changes will be always committed 
-to the current (master, in this case) branch.</p>
+<p>Let's then commit the changes, noticing that they will be always committed 
+to the current branch (which is <code>master</code>, in this case).</p>
 <p><img alt="git-branch-9--commit-enrico" src="../assets/img/cli-branch-9--commit-enrico.png" /></p>
 <p>Let's now log the commits (with some extra options to show the branch tree
 structure).</p>
@@ -614,13 +612,13 @@ You can verify that by switching back to the json branch and checking that
 <p>In the previous chapters we have created a git-versioned project and committed
 some changes in different branches. Now we have two divergent branches and
 in this chapter we will merge them together in the master branch again.</p>
-<p>To merge the <code>json</code> branch into the <code>master</code> branch, we need to switch to
-<code>master</code> and enter the git command <code>git merge json</code>.</p>
+<p>To merge the <code>json</code> branch into the <code>master</code> branch, we need to switch to the
+branch named <code>master</code> and then enter the git command <code>git merge json</code>.</p>
 <p><img alt="git-merge-1" src="../assets/img/cli-merge-1.png" /></p>
-<p>You can verify that in the working directory there are now all the changes
-performed in the <code>json</code> branch and all the changes performed in the <code>master</code>
-branch. By logging the commits tree, you can also see that the merge command
-has automatically created a new commit.</p>
+<p>You can verify that all the changes performed in the <code>json</code> branch and all the 
+changes performed in the <code>master</code> branch are now all in the working directory. 
+By logging the commits tree, you can also see that the merge command has 
+automatically created a new commit.</p>
 <p><img alt="git-merge-1" src="../assets/img/cli-merge-2.png" /></p>
 <blockquote>
 <p>Once you are done with the <code>json</code> branch, you may delete it using the

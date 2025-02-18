@@ -423,7 +423,7 @@ contact item is a text file.</p>
 <li>For a general description of what each Git command does, 
   see <a href="../">this article</a> insted.</li>
 <li>If you don't have the git CLI installed on your machine yet, you 
-  can download it from the <a href="https://git-scm.com/downloadd">git website</a>.</li>
+  can download it from the <a href="https://git-scm.com/downloads">git website</a>.</li>
 <li>This article will assume that you operate on Microsoft Windows, but the git
   commands are exactly the same on other platforms.</li>
 </ul>
@@ -477,7 +477,7 @@ there have been made no changes since the last commit.</p>
 <p>You can repeat this as many times as you want. To ilustrate that, let's 
 apply some changes and commit them. </p>
 <p>First of all we mispelled the family name of Marie, therefore we need 
-to change the K to a C. Let's do it and save the file.</p>
+to change <em>'Kurie'</em>  to <em>'Curie'</em>. Let's do it and save the file.</p>
 <pre><code>name: Marie Curie
 phone: +33 1 56 24 55 00
 </code></pre>
@@ -518,22 +518,18 @@ has been modified to match the content at the moment of the first commit,
 which is:</p>
 <ul>
 <li>Only two files present: <code>Marie.txt</code> and <code>John.txt</code></li>
-<li>The file <code>Marie.txt</code> contains the mispelled name 'Kourie'</li>
+<li>The file <code>Marie.txt</code> contains the mispelled name <em>'Kourie'</em></li>
 </ul>
 <p>Although possible, this way of switching between commits is not commonly
-used (as the long info message suggests); branching is a much better
-way of doing that. Let's therefore restore the original sistuation by
-checkking out the master branch.</p>
+used; branching is a much better way of doing that. Let's therefore restore 
+the original sistuation by checkking out the master branch.</p>
 <p><img alt="git-checkout" src="../assets/img/cli-checkout-2.png" /></p>
 <p>Again, you can now verify that the lates working directory content has 
 been restored. In particular:</p>
 <ul>
 <li>The folder contains three files: <code>Marie.txt</code>, <code>John.txt</code> and <code>Alan.txt</code></li>
-<li>The file <code>Marie.txt</code> contains the correctly spelled name 'Courie'</li>
+<li>The file <code>Marie.txt</code> contains the correctly spelled name <em>'Courie'</em></li>
 </ul>
-<pre><code>name: Marie Kurie
-phone: +33 1 56 24 55 00
-</code></pre>
 <h2 id="git-branch-operations">git branch operations</h2>
 <blockquote>
 <p>For a description of this operation see the <a href="../">main tutorial</a>.</p>
@@ -609,7 +605,7 @@ structure).</p>
 <p><img alt="git-branch-10--commit-log" src="../assets/img/cli-branch-10--commit-log.png" /></p>
 <p>As you can see, the latest commit (add Enrico) belongs to the master branch.
 You can verify that by switching back to the json branch and checking that
-<code>Enrico.txt</code> is not presente in that branch.</p>
+<code>Enrico.txt</code> is not present in that branch.</p>
 <p><img alt="git-branch-11--checkout-json" src="../assets/img/cli-branch-11--checkout-json.png" /></p>
 <h2 id="git-merge-operation">git merge operation</h2>
 <blockquote>
@@ -619,7 +615,7 @@ You can verify that by switching back to the json branch and checking that
 some changes in different branches. Now we have two divergent branches and
 in this chapter we will merge them together in the master branch again.</p>
 <p>To merge the <code>json</code> branch into the <code>master</code> branch, we need to switch to
-<code>master</code> and launch the git command <code>git merge json</code>.</p>
+<code>master</code> and enter the git command <code>git merge json</code>.</p>
 <p><img alt="git-merge-1" src="../assets/img/cli-merge-1.png" /></p>
 <p>You can verify that in the working directory there are now all the changes
 performed in the <code>json</code> branch and all the changes performed in the <code>master</code>

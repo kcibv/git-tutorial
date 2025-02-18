@@ -191,8 +191,7 @@ Here is a selection of them.
 - [Learn Git branching](https://learngitbranching.js.org/) an interactive resource
   for learning Git.
 - [Linus Torvalds & git](https://www.youtube.com/watch?v=idLyobOhtO4) a video of
-  Linus Torvald (the creator of Linux and Git) talking about Git at Google. If
-  you are a nerd like me, you'll find this also very entertaining.
+  Linus Torvald (the creator of Linux and Git) talking about Git at Google.
 
 
 

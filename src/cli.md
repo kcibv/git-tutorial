@@ -8,7 +8,7 @@ contact item is a text file.
 > - For a general description of what each Git command does, 
 >   see [this article](./index.md) insted.
 > - If you don't have the git CLI installed on your machine yet, you 
->   can download it from the [git website](https://git-scm.com/downloadd).
+>   can download it from the [git website](https://git-scm.com/downloads).
 > - This article will assume that you operate on Microsoft Windows, but the git
 >   commands are exactly the same on other platforms.
 
@@ -82,7 +82,7 @@ You can repeat this as many times as you want. To ilustrate that, let's
 apply some changes and commit them. 
 
 First of all we mispelled the family name of Marie, therefore we need 
-to change the K to a C. Let's do it and save the file.
+to change *'Kurie'*  to *'Curie'*. Let's do it and save the file.
 
 ```
 name: Marie Curie
@@ -137,12 +137,11 @@ has been modified to match the content at the moment of the first commit,
 which is:
 
 - Only two files present: `Marie.txt` and `John.txt`
-- The file `Marie.txt` contains the mispelled name 'Kourie'
+- The file `Marie.txt` contains the mispelled name *'Kourie'*
 
 Although possible, this way of switching between commits is not commonly
-used (as the long info message suggests); branching is a much better
-way of doing that. Let's therefore restore the original sistuation by
-checkking out the master branch.
+used; branching is a much better way of doing that. Let's therefore restore 
+the original sistuation by checkking out the master branch.
 
 ![git-checkout](assets/img/cli-checkout-2.png)
 
@@ -150,12 +149,8 @@ Again, you can now verify that the lates working directory content has
 been restored. In particular:
 
 - The folder contains three files: `Marie.txt`, `John.txt` and `Alan.txt`
-- The file `Marie.txt` contains the correctly spelled name 'Courie'
+- The file `Marie.txt` contains the correctly spelled name *'Courie'*
 
-```
-name: Marie Kurie
-phone: +33 1 56 24 55 00
-```
 
 ## git branch operations
 > For a description of this operation see the [main tutorial](index.md).
@@ -263,7 +258,7 @@ structure).
 
 As you can see, the latest commit (add Enrico) belongs to the master branch.
 You can verify that by switching back to the json branch and checking that
-`Enrico.txt` is not presente in that branch.
+`Enrico.txt` is not present in that branch.
 
 ![git-branch-11--checkout-json](assets/img/cli-branch-11--checkout-json.png)
 
@@ -276,7 +271,7 @@ some changes in different branches. Now we have two divergent branches and
 in this chapter we will merge them together in the master branch again.
 
 To merge the `json` branch into the `master` branch, we need to switch to
-`master` and launch the git command `git merge json`.
+`master` and enter the git command `git merge json`.
 
 ![git-merge-1](assets/img/cli-merge-1.png)
 

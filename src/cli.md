@@ -1,7 +1,7 @@
 # Use Git via the Command-Line interface
 
-This page will show how to perform the main git operations using the
-git Command-Line Interface (CLI) and it will do so by walking the reader
+This page will show you how to perform the main git operations using the
+git Command-Line Interface (CLI) and it will do so by walking you
 through the creation of a text-based contact book, where every
 contact item is a text file.
 
@@ -10,7 +10,7 @@ contact item is a text file.
 > - If you don't have the git CLI installed on your machine yet, you 
 >   can download it from the [git website](https://git-scm.com/downloads).
 > - This article will assume that you operate on Microsoft Windows, but the git
->   commands are exactly the same on other platforms.
+>   commands are exactly the same on all other platforms.
 
 
 ## git init operation
@@ -30,16 +30,16 @@ This command creates a `.git` sub-directory in the `contacts` directory.
 ## git commit operation
 > For a general description of this git operation see the [main article](index.md).
 
-In order to have some changes to commit, let's add the firt two items to our
+In order to have some changes to commit, let's add the first two items to our
 contacts book by creating two files `John.txt` and `Marie.txt`.
 
-Let's write the following content to `John.txt` and save it:
+Let's write the following contents to `John.txt` and save it:
 ```
 name: John Nash
 phone: +1 617 253 1000
 ```
 
-Let's write the following content to `Marie.txt` and save it:
+Let's write the following contents to `Marie.txt` and save it:
 ```
 name: Marie Kurie
 phone: +33 1 56 24 55 00
@@ -50,39 +50,38 @@ You can visualize the current changes by using the `git status` command.
 ![git-status](assets/img/cli-commit-1.png)
 
 Git has correctly detected that, compared to the initial status (empty
-directory) there are two new files. 
+directory) there are now two new files. 
 
-Say that this is a version of our project that we want to commit; first 
-of all we need to tell git which changes we want to commit and which not: 
-for example you may want to commit only `Marie.txt` or only `John.txt`. You
-do that by adding the changes you want to commit to a virtual bucket
-named *staging area*, using the `git add` command. In this case we will
-add all the changes to the staging area.
+Say that this is a version of our project that we want to commit: we will
+first of all need to tell git which changes we want to commit and which 
+we don't. For example, you may want to commit only `Marie.txt` or only 
+`John.txt`. You can do that by adding the changes you want to commit to 
+a virtual bucket named *staging area*, using the `git add` command. In 
+this case we will add all the changes to the staging area.
 
 ![git-status](assets/img/cli-commit-2.png)
 
-If we run the `git status` command again, we see that the status has
+If we run the `git status` command again, we'll see that the status has
 changed: the two files are not in the *Untracked* status anymore, but
 they are now under *Changes to be commited*.
 
 ![git-status](assets/img/cli-commit-3.png)
 
-Now we can finally commit the changes and we do it using the
-`git commit` command, followed by a message that describes the
-commit.
+Now we can finally commit the changes and we'll do so using the
+`git commit` command, followed by a message that describes the commit.
 
 ![git-status](assets/img/cli-commit-4.png)
 
 If you run the `git status` command again, git will tell you that
-there have been made no changes since the last commit.
+there no changes have been made since the last commit.
 
 ![git-status](assets/img/cli-commit-5.png)
 
-You can repeat this as many times as you want. To ilustrate that, let's 
+You can repeat this as many times as you want. To illustrate this, let's 
 apply some changes and commit them. 
 
-First of all we mispelled the family name of Marie, therefore we need 
-to change *'Kurie'*  to *'Curie'*. Let's do it and save the file.
+First of all we misspelled the family name of Marie, therefore we need 
+to change *'Kurie'*  to *'Curie'*. Let's do that and save the file.
 
 ```
 name: Marie Curie
@@ -90,7 +89,7 @@ phone: +33 1 56 24 55 00
 ```
 
 Then let's add the new item `Alan.txt` to our contacts book and set
-its content as follows:
+its contents as follows:
 
 ```
 name: Alan Turing
@@ -122,12 +121,12 @@ the two commits:
 ## git checkout operation
 > For a description of this operation see the [main tutorial](index.md).
 
-So far we have initialized a git project and commited two sets of 
+So far we have initialized a git project and committed two sets of 
 changes. Our project folder is now identical to the second commit. If
 you want to go back to the first commit, you can use the `git checkout`
 command. In the following example, the first commit (the one named
 `9b457e6394b1a3918d030a703cf25b5cc81e31a4`) is checked out; notice that
-you need to pass only the fist few characters of the commit name: just
+you need to enter only the first few characters of the commit name: just
 enough to uniquely identify the commit.
 
 ![git-checkout](assets/img/cli-checkout-1.png)
@@ -137,7 +136,7 @@ has been modified to match the content at the moment of the first commit,
 which is:
 
 - Only two files present: `Marie.txt` and `John.txt`
-- The file `Marie.txt` contains the mispelled name *'Kourie'*
+- The file `Marie.txt` contains the misspelled name *'Kourie'*
 
 Although possible, this way of switching between commits is not commonly
 used; branching is a much better way of doing that. Let's therefore restore 
@@ -145,7 +144,7 @@ the original sistuation by checkking out the master branch.
 
 ![git-checkout](assets/img/cli-checkout-2.png)
 
-Again, you can now verify that the lates working directory content has 
+Again, you can now verify that the lates working directory contents have
 been restored. In particular:
 
 - The folder contains three files: `Marie.txt`, `John.txt` and `Alan.txt`
@@ -155,11 +154,10 @@ been restored. In particular:
 ## git branch operations
 > For a description of this operation see the [main tutorial](index.md).
 
-Say that you decide to convert your items format from plain text to
-[JSON](https://en.wikipedia.org/wiki/JSON) but while you are busy with
-it you want to keep your current format available. You then need to
-branch your project, using the `git branch` command. We will call the
-new branch "json".
+Say that you've decided to convert your items from plain text format to
+[JSON](https://en.wikipedia.org/wiki/JSON), but  you want to keep your 
+current format available. You will need to branch your project, using the 
+`git branch` command. We will call the new branch "json".
 
 ![git-branch-1--create-json](assets/img/cli-branch-1--create-json.png)
 
@@ -170,23 +168,23 @@ extisting branches by typing the `git branch` command without parameters.
 
 The previous command shows that there are two branches and that the
 active branch (the one with a * next to it) is `master`. The branch
-command, indeed, creates a new branch but it doesn't automatically
+command, indeed, created a new branch but it didn't automatically
 activate it. To switch to the `json` branch, we use the `git checkout`
 command:
 
 ![git-branch-3--checkout-json](assets/img/cli-branch-3--checkout-json.png)
 
-> Notice that the screenshot of this tutorial are not made using
-> the default windows shell (cmd), but using a git-aware shell. 
-> That's why you see, for example, the name of the current branch
+> Notice that the screenshotd of this tutorial are not made using
+> the default windows shell (cmd), but are done so using a git-aware 
+> shell. That's why you see, for example, the name of the current branch
 > next to the prompt.
 
 Now the active branch is `json`, but since we have just created it,
-its content is identical to the `master` branch. Let's then start
+its contents are identical to the `master` branch. Let's then start
 committing changes, knowing that the original `master` branch 
 content is just a `git checkout master` away.
 
-Let's rename `Marie.txt` to `Marie.json` and modify its content
+Let's rename `Marie.txt` to `Marie.json` and modify its contents
 as follows ...
 
 ```
@@ -200,7 +198,7 @@ as follows ...
 
 ![git-branch-4--commit-marie](assets/img/cli-branch-4--commit-marie.png)
 
-Let's now rename `John.txt` to `John.json` and modify its content
+Let's now rename `John.txt` to `John.json` and modify its contents
 as follows ...
 
 ```
@@ -214,7 +212,7 @@ as follows ...
 
 ![git-branch-5--commit-john](assets/img/cli-branch-5--commit-john.png)
 
-Let's finally rename `Alan.txt` to `Alan.json` and modify its content
+Let's finally rename `Alan.txt` to `Alan.json` and modify its contents
 as follows ...
 
 ```
@@ -229,7 +227,7 @@ as follows ...
 ![git-branch-6--commit-alan](assets/img/cli-branch-6--commit-alan.png)
 
 We have now performed 5 commits in total: the first two in `master` and
-three in `json`, as shown by the `git log` command.
+the other three in `json`, as shown by the `git log` command.
 
 ![git-branch-7--commit-log](assets/img/cli-branch-7--commit-log.png)
 
@@ -246,8 +244,8 @@ name: Enrico Fermi
 phone: +39 06 4550 2901
 ```
 
-Let's then commit the changes; notice that the changes will be always committed 
-to the current (master, in this case) branch.
+Let's then commit the changes, noticing that they will be always committed 
+to the current branch (which is `master`, in this case).
 
 ![git-branch-9--commit-enrico](assets/img/cli-branch-9--commit-enrico.png)
 
@@ -270,15 +268,15 @@ In the previous chapters we have created a git-versioned project and committed
 some changes in different branches. Now we have two divergent branches and
 in this chapter we will merge them together in the master branch again.
 
-To merge the `json` branch into the `master` branch, we need to switch to
-`master` and enter the git command `git merge json`.
+To merge the `json` branch into the `master` branch, we need to switch to the
+branch named `master` and then enter the git command `git merge json`.
 
 ![git-merge-1](assets/img/cli-merge-1.png)
 
-You can verify that in the working directory there are now all the changes
-performed in the `json` branch and all the changes performed in the `master`
-branch. By logging the commits tree, you can also see that the merge command
-has automatically created a new commit.
+You can verify that all the changes performed in the `json` branch and all the 
+changes performed in the `master` branch are now all in the working directory. 
+By logging the commits tree, you can also see that the merge command has 
+automatically created a new commit.
 
 ![git-merge-1](assets/img/cli-merge-2.png)
 
